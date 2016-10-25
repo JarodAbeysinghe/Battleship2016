@@ -27,8 +27,8 @@ public static class GameResources
 	{
 		//Backgrounds
 		NewImage("Menu", "main_page.jpg");
-		NewImage("Discovery", "discover.jpg");
-		NewImage("Deploy", "deploy.jpg");
+		NewImage("Discovery", "discover1.jpg");
+		NewImage("Deploy", "deploy1.jpg");
 
 		//Deployment
 		NewImage("LeftRightButton", "deploy_dir_button_horiz.png");
@@ -40,8 +40,8 @@ public static class GameResources
 		//Ships
 		int i = 0;
 		for (i = 1; i <= 5; i++) {
-			NewImage("ShipLR" + i, "ship_deploy_horiz_" + i + ".png");
-			NewImage("ShipUD" + i, "ship_deploy_vert_" + i + ".png");
+			NewImage("ShipLR" + i, "ship_deploy_horizontal_" + i + ".png");
+			NewImage("ShipUD" + i, "ship_deploy_vertical_" + i + ".png");
 		}
 
 		//Explosions
