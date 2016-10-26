@@ -20,6 +20,14 @@ static class DiscoveryController
 	/// </remarks>
 	public static void HandleDiscoveryInput()
 	{
+		if (SwinGame.KeyTyped(KeyCode.vk_a)) {
+			//SwinGame.StopMusic();
+			SwinGame.PlayMusic(GameResources.GameMusic("Background1"));
+		}
+		if (SwinGame.KeyTyped(KeyCode.vk_b)) {
+			//SwinGame.StopMusic();
+			SwinGame.PlayMusic(GameResources.GameMusic("Background"));
+		}
 		if (SwinGame.KeyTyped(KeyCode.vk_ESCAPE)) {
 			GameController.AddNewState(GameState.ViewingGameMenu);
 		}
@@ -82,9 +90,11 @@ static class DiscoveryController
 		SwinGame.DrawText(GameController.HumanPlayer.Shots.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, SHOTS_TOP);
 		SwinGame.DrawText(GameController.HumanPlayer.Hits.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, HITS_TOP);
 		SwinGame.DrawText(GameController.HumanPlayer.Missed.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, SPLASH_TOP);
-		SwinGame.DrawTextLines("Main Menu", Color.White, Color.Black, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2) - 50, 94, 75, 15);
-		SwinGame.DrawTextLines("High Scores", Color.White, Color.Black, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2)+ 50, 94, 80, 15);
-		SwinGame.DrawTextLines("Quit", Color.DimGray, Color.Black, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2)+ 317, 94, 75, 15);
+		SwinGame.DrawTextLines("Main Menu", Color.Blue, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2) - 50, 94, 75, 15);
+		SwinGame.DrawTextLines("High Scores", Color.Blue, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2)+ 50, 94, 80, 15);
+		SwinGame.DrawTextLines("Quit", Color.Gray, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2)+ 317, 94, 75, 15);
+		SwinGame.DrawTextLines("Quit", Color.Gray, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2)+ 317, 94, 75, 15);
+		SwinGame.DrawTextLines("Press A to Change to a song/Press B to Change back", Color.Blue, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2)-50, 570, 400, 15);
 
 	}
 

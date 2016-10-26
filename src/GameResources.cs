@@ -15,9 +15,9 @@ public static class GameResources
 	private static void LoadFonts()
 	{
 		NewFont("ArialLarge", "arial.ttf", 80);
-		NewFont("Courier", "cour.ttf", 16);
+		NewFont("Courier", "cour.ttf", 14);
 		NewFont("CourierSmall", "cour.ttf", 8);
-		NewFont("Menu", "ffaccess.ttf", 16);
+		NewFont("Menu", "ffaccess.ttf", 8);
 	}
 
 	/// <summary>
@@ -67,6 +67,7 @@ public static class GameResources
 	private static void LoadMusic()
 	{
 		NewMusic("Background", "Frost.mp3");
+		NewMusic ("Background1", "song.mp3");
 	}
 
 	/// <summary>
