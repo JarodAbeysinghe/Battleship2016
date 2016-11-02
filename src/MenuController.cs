@@ -24,7 +24,6 @@ static class MenuController
 	private static readonly string[][] _menuStructure = {
 		new string[] {
 			"PLAY",
-			"SETUP",
 			"SCORES",
 			"QUIT"
 		},
@@ -40,11 +39,11 @@ static class MenuController
 		}
 
 	};
-	private const int MENU_TOP = 250;
-	private const int MENU_LEFT = 200;
+	private const int MENU_TOP = 150;
+	private const int MENU_LEFT = 250;
 	private const int MENU_GAP = 8;
 	private const int BUTTON_WIDTH = 100;
-	private const int BUTTON_HEIGHT = 100;
+	private const int BUTTON_HEIGHT = 25;
 	private const int BUTTON_SEP = BUTTON_WIDTH + MENU_GAP;
 
 	private const int TEXT_OFFSET = 0;
@@ -195,11 +194,11 @@ static class MenuController
 	{
 		int btnTop = 0;
 
-		btnTop = MENU_TOP - (MENU_GAP + BUTTON_HEIGHT) * level;
+		btnTop = MENU_TOP + 2*(MENU_GAP + BUTTON_HEIGHT) * level;
 		int i = 0;
 		for (i = 0; i <= _menuStructure[menu].Length - 1; i++) {
 			int btnLeft = 0;
-			btnLeft = MENU_LEFT + BUTTON_SEP * (i + xOffset);
+			btnLeft = MENU_LEFT + BUTTON_SEP * (i);
 			//SwinGame.FillRectangle(Color.White, btnLeft, btnTop, BUTTON_WIDTH, BUTTON_HEIGHT)
 			SwinGame.DrawTextLines(_menuStructure[menu][i], MENU_COLOR, Color.Black, GameResources.GameFont("StartMenu"), FontAlignment.AlignCenter, btnLeft + TEXT_OFFSET, btnTop + TEXT_OFFSET, BUTTON_WIDTH, BUTTON_HEIGHT);
 
@@ -228,8 +227,8 @@ static class MenuController
 	/// <returns>true if the mouse is over the button</returns>
 	private static bool IsMouseOverMenu(int button, int level, int xOffset)
 	{
-		int btnTop = MENU_TOP - (MENU_GAP + BUTTON_HEIGHT) * level;
-		int btnLeft = MENU_LEFT + BUTTON_SEP * (button + xOffset);
+		int btnTop = MENU_TOP + 2*(MENU_GAP + BUTTON_HEIGHT) * level;
+		int btnLeft = MENU_LEFT + BUTTON_SEP * (button);
 
 		return UtilityFunctions.IsMouseInRectangle(btnLeft, btnTop, BUTTON_WIDTH, BUTTON_HEIGHT);
 	}
@@ -261,10 +260,10 @@ static class MenuController
 	private static void PerformMainMenuAction(int button)
 	{
 		switch (button) {
+			//case MAIN_MENU_PLAY_BUTTON:
+			//GameController.StartGame();
+			//	break;
 			case MAIN_MENU_PLAY_BUTTON:
-			GameController.StartGame();
-				break;
-			case MAIN_MENU_SETUP_BUTTON:
 			GameController.AddNewState(GameState.AlteringSettings);
 				break;
 			case MAIN_MENU_TOP_SCORES_BUTTON:
@@ -294,7 +293,7 @@ static class MenuController
 				break;
 		}
 		//Always end state - handles exit button as well
-		GameController.EndCurrentState();
+		GameController.StartGame();
 	}
 
 	/// <summary>
