@@ -78,6 +78,7 @@ static class DiscoveryController
 		const int HITS_TOP = 206;
 		const int SPLASH_TOP = 256;
 
+		const int LEFT_TOP = 306;
 		if ((SwinGame.KeyDown(KeyCode.vk_LSHIFT) | SwinGame.KeyDown(KeyCode.vk_RSHIFT)) & SwinGame.KeyDown(KeyCode.vk_c)) {
 			UtilityFunctions.DrawField(GameController.HumanPlayer.EnemyGrid, GameController.ComputerPlayer, true);
 		} else {
@@ -95,6 +96,10 @@ static class DiscoveryController
 		SwinGame.DrawTextLines("Quit", Color.Gray, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2)+ 317, 94, 75, 15);
 		SwinGame.DrawTextLines("Quit", Color.Gray, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2)+ 317, 94, 75, 15);
 		SwinGame.DrawTextLines("Press A to Change to a song/Press B to Change back", Color.Blue, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2)-50, 570, 400, 15);
+
+		SwinGame.DrawTextLines("Ships Destroyed:", Color.Red, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2)-398, 300, SCORES_LEFT, LEFT_TOP-6);
+
+		SwinGame.DrawText(GameController.ComputerPlayer.PlayerGrid.ShipsKilled.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, LEFT_TOP-6);
 
 	}
 
