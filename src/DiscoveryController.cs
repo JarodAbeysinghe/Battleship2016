@@ -28,21 +28,21 @@ static class DiscoveryController
 			//SwinGame.StopMusic();
 			SwinGame.PlayMusic(GameResources.GameMusic("Background"));
 		}
-		if (SwinGame.KeyTyped(KeyCode.vk_ESCAPE)) {
-			GameController.AddNewState(GameState.ViewingGameMenu);
-		}
+
 
 		if (SwinGame.MouseClicked(MouseButton.LeftButton)) {
 			DoAttack();
 		}
 		if (UtilityFunctions.IsMouseInRectangle((SwinGame.ScreenWidth()/2)- 50, 94, 75, 15) && SwinGame.MouseClicked(MouseButton.LeftButton)) {
 			GameController.AddNewState(GameState.ViewingMainMenu);
+			SwinGame.ResetTimer (GameTimer);
 		}
 		if (UtilityFunctions.IsMouseInRectangle((SwinGame.ScreenWidth()/2)+ 50, 94, 80, 15) && SwinGame.MouseClicked(MouseButton.LeftButton)) {
 			GameController.AddNewState(GameState.ViewingHighScores);
 		}
 		if (UtilityFunctions.IsMouseInRectangle((SwinGame.ScreenWidth()/2)+ 317, 94, 75, 15) && SwinGame.MouseClicked(MouseButton.LeftButton)) {
 			GameController.AddNewState (GameState.Quitting);
+			SwinGame.ResetTimer (GameTimer);
 		}
 	}
 
@@ -67,7 +67,11 @@ static class DiscoveryController
 			}
 		}
 	}
-
+	public static Timer GameTimer = SwinGame.CreateTimer ();
+	public static uint _time;
+	public static string s;
+	public static int x = 0;
+	public static uint min = 0;
 	/// <summary>
 	/// Draws the game during the attack phase.
 	/// </summary>s
@@ -79,6 +83,12 @@ static class DiscoveryController
 		const int SPLASH_TOP = 256;
 
 		const int LEFT_TOP = 306;
+		if (x == 0)
+		{	
+			SwinGame.ResetTimer (GameTimer);
+			SwinGame.StartTimer (GameTimer);
+			x++;
+		}
 		if ((SwinGame.KeyDown(KeyCode.vk_LSHIFT) | SwinGame.KeyDown(KeyCode.vk_RSHIFT)) & SwinGame.KeyDown(KeyCode.vk_c)) {
 			UtilityFunctions.DrawField(GameController.HumanPlayer.EnemyGrid, GameController.ComputerPlayer, true);
 		} else {
@@ -100,7 +110,20 @@ static class DiscoveryController
 		SwinGame.DrawTextLines("Ships Destroyed:", Color.Red, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2)-398, 300, SCORES_LEFT, LEFT_TOP-6);
 
 		SwinGame.DrawText(GameController.ComputerPlayer.PlayerGrid.ShipsKilled.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, LEFT_TOP-6);
+		s = _time.ToString ();
+		_time = SwinGame.TimerTicks (GameTimer)/1000;
 
+		SwinGame.DrawTextLines("Time: " +s, Color.Blue, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2)-450, 94, 400, 15);
+		if (_time == 300)
+		{
+			SwinGame.DrawTextLines("Click the mouse to Exit    ", Color.Yellow, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignRight, 0, 550, SwinGame.ScreenWidth(), SwinGame.ScreenHeight());
+			SwinGame.DrawTextLines("TIME UP!!!", Color.Yellow, Color.Transparent, GameResources.GameFont("ArialLarge"), FontAlignment.AlignCenter, 0, 250, SwinGame.ScreenWidth(), SwinGame.ScreenHeight());
+			SwinGame.PauseTimer (GameTimer);
+			if (SwinGame.MouseClicked(MouseButton.LeftButton)) {
+				SwinGame.ResetTimer (GameTimer);
+				GameController.AddNewState(GameState.Quitting);
+			}
+		}
 	}
 
 }
