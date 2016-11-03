@@ -44,6 +44,11 @@ static class DiscoveryController
 			GameController.AddNewState (GameState.Quitting);
 			SwinGame.ResetTimer (GameTimer);
 		}
+		if (UtilityFunctions.IsMouseInRectangle((SwinGame.ScreenWidth()/2)+ 160, 94, 75, 15) && SwinGame.MouseClicked(MouseButton.LeftButton)) {
+			GameController.AddNewState (GameState.AlteringSettings);
+			SwinGame.ResetTimer (GameTimer);
+		}
+
 	}
 
 	/// <summary>
@@ -104,7 +109,7 @@ static class DiscoveryController
 		SwinGame.DrawTextLines("Main Menu", Color.Blue, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2) - 50, 94, 75, 15);
 		SwinGame.DrawTextLines("High Scores", Color.Blue, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2)+ 50, 94, 80, 15);
 		SwinGame.DrawTextLines("Quit", Color.Gray, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2)+ 317, 94, 75, 15);
-		SwinGame.DrawTextLines("Quit", Color.Gray, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2)+ 317, 94, 75, 15);
+		SwinGame.DrawTextLines("Restart", Color.Blue, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2)+ 160, 94, 75, 15);
 		SwinGame.DrawTextLines("Press A to Change to a song/Press B to Change back", Color.Blue, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2)-50, 570, 400, 15);
 
 		SwinGame.DrawTextLines("Ships Destroyed:", Color.Red, Color.Transparent, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, (SwinGame.ScreenWidth()/2)-398, 300, SCORES_LEFT, LEFT_TOP-6);
