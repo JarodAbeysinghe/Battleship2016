@@ -53,6 +53,9 @@ public class SeaGrid : ISeaGrid
 		get { return _ShipsKilled; }
 	}
 
+	public Dictionary<ShipName, Ship> Ships {
+		get { return _Ships; }
+	}
 	/// <summary>
 	/// Show the tile view
 	/// </summary>

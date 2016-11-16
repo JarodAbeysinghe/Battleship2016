@@ -375,6 +375,10 @@ public static class GameController
 	{
 		_aiSetting = setting;
 	}
+	public static AIOption AICurrent
+	{
+		get{ return _aiSetting;}
+	}
 
 }
 

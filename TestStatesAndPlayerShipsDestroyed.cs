@@ -1,5 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace BattleShips
 {
@@ -64,6 +65,8 @@ namespace BattleShips
 			//Test if all ships are killed
 			Assert.AreEqual (p.PlayerGrid.ShipsKilled,5);
 		}
+
+	
 	}
 }
 

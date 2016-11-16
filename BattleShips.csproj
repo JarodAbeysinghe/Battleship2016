@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="src\**\*.cs" />
     <Compile Include="TestStatesAndPlayerShipsDestroyed.cs" />
+    <Compile Include="src\DifficultyLevelTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
