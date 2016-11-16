@@ -1,15 +1,15 @@
 ﻿<Properties StartupItem="BattleShips.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src\DiscoveryController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TestStatesAndPlayerShipsDestroyed.cs">
     <Files>
-      <File FileName="src\DeploymentController.cs" Line="62" Column="40" />
+      <File FileName="TestStatesAndPlayerShipsDestroyed.cs" Line="43" Column="13" />
       <File FileName="src\GameController.cs" Line="1" Column="1" />
-      <File FileName="src\GameResources.cs" Line="33" Column="3" />
-      <File FileName="src\DiscoveryController.cs" Line="108" Column="89" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\100060428\Downloads\Battleship2016-master\Battleship2016-master\TestStatesAndPlayerShipsDestroyed.cs" line="34" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
