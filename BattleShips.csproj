@@ -68,6 +68,7 @@
     <Compile Include="TestStatesAndPlayerShipsDestroyed.cs" />
     <Compile Include="src\DifficultyLevelTest.cs" />
     <Compile Include="UnitTestingDulitha.cs" />
+    <Compile Include="UnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">

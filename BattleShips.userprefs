@@ -1,6 +1,6 @@
 ﻿<Properties StartupItem="BattleShips.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="UnitTestingDulitha.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UnitTests.cs">
     <Files>
       <File FileName="UnitTestingDulitha.cs" Line="7" Column="33" />
       <File FileName="src\GameController.cs" Line="1" Column="1" />
@@ -15,7 +15,22 @@
       <File FileName="src\Model\AIPlayer.cs" Line="1" Column="1" />
       <File FileName="src\Model\AIMediumPlayer.cs" Line="1" Column="1" />
       <File FileName="src\DifficultyLevelTest.cs" Line="1" Column="1" />
+      <File FileName="packages.config" Line="1" Column="1" />
+      <File FileName="UnitTests.cs" Line="41" Column="13" />
     </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="BattleShips" expanded="True">
+            <Node name="BattleShips" expanded="True">
+              <Node name="BattleShips" expanded="True">
+                <Node name="UnitTests" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
