@@ -1,19 +1,20 @@
 ﻿<Properties StartupItem="BattleShips.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src\DifficultyLevelTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UnitTestingDulitha.cs">
     <Files>
-      <File FileName="src\GameController.cs" Line="371" Column="57" />
-      <File FileName="src\Model\BattleShipsGame.cs" Line="80" Column="21" />
-      <File FileName="src\Model\SeaGrid.cs" Line="56" Column="1" />
+      <File FileName="UnitTestingDulitha.cs" Line="7" Column="33" />
+      <File FileName="src\GameController.cs" Line="1" Column="1" />
+      <File FileName="src\Model\BattleShipsGame.cs" Line="1" Column="1" />
+      <File FileName="src\Model\SeaGrid.cs" Line="1" Column="1" />
       <File FileName="src\Model\ShipName.cs" Line="1" Column="1" />
-      <File FileName="src\Model\Player.cs" Line="227" Column="17" />
-      <File FileName="src\DeploymentController.cs" Line="37" Column="42" />
+      <File FileName="src\Model\Player.cs" Line="1" Column="1" />
+      <File FileName="src\DeploymentController.cs" Line="1" Column="1" />
       <File FileName="TestStatesAndPlayerShipsDestroyed.cs" Line="1" Column="1" />
-      <File FileName="src\Model\AIOption.cs" Line="24" Column="29" />
-      <File FileName="src\Model\AIHardPlayer.cs" Line="238" Column="21" />
+      <File FileName="src\Model\AIOption.cs" Line="1" Column="1" />
+      <File FileName="src\Model\AIHardPlayer.cs" Line="1" Column="1" />
       <File FileName="src\Model\AIPlayer.cs" Line="1" Column="1" />
       <File FileName="src\Model\AIMediumPlayer.cs" Line="1" Column="1" />
-      <File FileName="src\DifficultyLevelTest.cs" Line="12" Column="5" />
+      <File FileName="src\DifficultyLevelTest.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

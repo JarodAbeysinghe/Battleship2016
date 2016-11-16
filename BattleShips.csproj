@@ -67,6 +67,7 @@
     <Compile Include="src\**\*.cs" />
     <Compile Include="TestStatesAndPlayerShipsDestroyed.cs" />
     <Compile Include="src\DifficultyLevelTest.cs" />
+    <Compile Include="UnitTestingDulitha.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">

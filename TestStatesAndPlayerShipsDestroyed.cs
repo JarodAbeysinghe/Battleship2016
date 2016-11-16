@@ -66,6 +66,18 @@ namespace BattleShips
 			Assert.AreEqual (p.PlayerGrid.ShipsKilled,5);
 		}
 
+		[Test()]
+		public void TestComputerPlayer()
+		{
+			BattleShipsGame Test = new BattleShipsGame ();
+			Player p = new Player (Test);
+
+			Assert.IsNull (GameController.ComputerPlayer);
+			Test.AddDeployedPlayer (p);
+
+			GameController.StartGame ();
+			Assert.IsNotNull (GameController.ComputerPlayer);
+		}
 	
 	}
 }
